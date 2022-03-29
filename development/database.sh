@@ -1,1 +1,1 @@
-docker run -p 5432:5432 -d --name hello -e POSTGRES_PASSWORD=root -e POSTGRES_USER=root -e PGDATA=/var/lib/postgresql/data/pgdata -v /custom/mount:/var/lib/postgresql/data postgres
+docker run -p 5432:5432 --network=api -d --name hello -e POSTGRES_PASSWORD=root -e POSTGRES_USER=root -e PGDATA=/var/lib/postgresql/data/pgdata -v /custom/mount:/var/lib/postgresql/data postgres
